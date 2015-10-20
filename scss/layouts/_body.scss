@@ -1,0 +1,29 @@
+main {
+
+  section {
+    margin: 25px 0 0 0;
+    aside,
+    article {
+      background:rgba(31, 31, 31, 0.9);
+      height:65px;
+    }
+  }
+
+  > section:first-child {
+    @include outer-container;
+
+    aside {
+      @include fill-parent;
+      @include media($desktop){
+        @include span-columns(1 of 12);
+      }
+    }
+    article {
+      @include fill-parent;
+      @include media($desktop){
+        @include span-columns(11 of 12);
+      }
+    }
+  }
+
+}
