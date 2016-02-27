@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     path = require('path'),
+    plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
     sourcemaps = require('gulp-sourcemaps'),
     minifyCss = require('gulp-minify-css');
@@ -11,6 +12,7 @@ var gulp = require('gulp'),
 // Gulp Sass Task
 gulp.task('sass', function() {
   gulp.src('./scss/{,*/}*.{scss,sass}')
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sourcemaps.init())
     .pipe(sass({
       errLogToConsole: true
