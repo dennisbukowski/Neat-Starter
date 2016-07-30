@@ -1,12 +1,4 @@
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1.0 - Bourbon, Bitters, Neat
-2.0 Components
-3.0 - Layouts
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
 1.0 Bourbon, Bitters, Neat
 --------------------------------------------------------------*/
 @import "bower_components/bourbon/app/assets/stylesheets/bourbon";
@@ -15,11 +7,20 @@
 @import "bower_components/neat/app/assets/stylesheets/neat";
 
 /*--------------------------------------------------------------
-2.0 Components
+2.0 Reset
 --------------------------------------------------------------*/
-@import "components/components";
+@import "bower_components/normalize-scss/normalize.scss";
 
 /*--------------------------------------------------------------
-3.0 Layouts
+3.0 Components
 --------------------------------------------------------------*/
-@import "layouts/layouts";
+@import "components/variables";
+
+/*--------------------------------------------------------------
+4.0 Layout
+--------------------------------------------------------------*/
+@import "layout/header";
+@import "layout/body";
+@import "layout/footer";
+@import "layout/navigation";
+@import "layout/construction";
